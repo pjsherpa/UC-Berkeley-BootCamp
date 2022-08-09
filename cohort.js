@@ -1,4 +1,5 @@
-const students = [{
+const students = [
+  {
     name: "Cody Murphy",
     location: "San Francisco, CA",
     isInTech: false,
@@ -86,7 +87,7 @@ const students = [{
     isInTech: false,
     os: "mac",
     keywords: ["career change", "travel", "experiencing new places"],
-    linkedIn: "https://www.linkedin.com/in/jenny-deng-a3676823b",
+    linkedIn: "http://www.linkedin.com/in/jennyhjdeng",
   },
   {
     name: "Makennah Titus (Kennah)",
@@ -109,20 +110,6 @@ const students = [{
       "hiking",
     ],
     linkedIn: "https://www.linkedin.com/in/afshinaslani/",
-  },
-  {
-    name: "Parham Rahmani Nikoo",
-    location: "Walnut Creek, CA",
-    isInTech: true,
-    os: "windows",
-    keywords: [
-      "seeks dev role at tech company",
-      "own company in the future",
-      "traveling",
-      "watching sports",
-      "video games",
-    ],
-    linkedIn: "https://www.linkedin.com/in/parham-rahmani-nikoo-866872142/",
   },
   {
     name: "Sherri Knight",
@@ -163,7 +150,7 @@ const students = [{
     linkedIn: "https://www.linkedin.com/in/phinjock-sherpa-08723677/",
   },
   {
-    name: "Scott Wattenbarger",
+    name: "Scott Wattenberger",
     location: "Bakersfield, CA",
     isInTech: false,
     os: "mac",
@@ -203,22 +190,6 @@ const students = [{
       "video games",
     ],
     linkedIn: "https://www.linkedin.com/in/kristina-litunovskaia-6a390a240/",
-  },
-  {
-    name: "Xiaomeng Zhang (Rebecca)",
-    location: "San Francisco, CA",
-    isInTech: true,
-    os: "mac",
-    keywords: [
-      "attorney coder",
-      "hiking",
-      "surfing",
-      "dancing",
-      "reading",
-      "binging shows",
-      "food photography",
-    ],
-    linkedIn: "https://www.linkedin.com/in/rebecca-xm-zhang/",
   },
   {
     name: "Samantha Juarez-Diaz (Sam)",
@@ -371,21 +342,6 @@ const students = [{
     linkedIn: "",
   },
   {
-    name: "Rommel Paat",
-    location: "Tracy, CA",
-    isInTech: false,
-    os: "windows",
-    keywords: [
-      "change of pace",
-      "possible new career",
-      "working on cars",
-      "car shows",
-      "video games",
-      "fishing",
-    ],
-    linkedIn: "",
-  },
-  {
     name: 'Lillian Meagher (pronounced "Ma-her")',
     location: "Oakland, CA",
     isInTech: false,
@@ -509,7 +465,7 @@ const students = [{
       "reading fantasy",
       "strategy games",
     ],
-    linkedIn: "https:// www.linkedin.com/in/joshua-nelson-2a956223b",
+    linkedIn: "https://www.linkedin.com/in/joshua-nelson-2a956223b",
   },
   {
     name: "Thomas",
@@ -714,7 +670,8 @@ const students = [{
   },
 ];
 
-const instructors = [{
+const instructors = [
+  {
     name: "Mark Carlson",
     location: "Walnut Creek, CA",
     role: "instructor",
@@ -749,7 +706,8 @@ const instructors = [{
       "let's begin here ...",
     ],
     linkedIn: "https://www.linkedin.com/in/stephonautery/",
-  }, {
+  },
+  {
     name: "Maurice Christopher",
     location: "Cleveland, Ohio",
     role: "teaching assistant",
@@ -764,7 +722,7 @@ const instructors = [{
       "dog owner",
       "cat owner",
       "entrepreneur",
-      "eager to learn"
+      "eager to learn",
     ],
     linkedIn: "https://www.linkedin.com/in/mauricechristopher",
   },
