@@ -63,13 +63,13 @@ var netflixQueue = {
     "Eternal Sunshine of the Spotless Mind",
     "Fight Club"
   ],
-  watchMovie: function()  {
+  watchMovie: () => {
     this.queue.pop();
   },
-  addMovie: function (movie) {
+  addMovie: (movie) => {
     this.queue.unshift(movie);
   },
-  printQueue: function()  {
+  printQueue: () => {
     var list = "";
     for (var i = this.queue.length - 1; i >= 0; i--) {
       var currentMovie = this.queue[i];

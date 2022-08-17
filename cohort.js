@@ -452,7 +452,7 @@ const students = [
       "travel",
       "favorite destination: Greek Islands & Austria",
     ],
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/mesky-assefa-2030i/",
   },
   {
     name: "Joshua Nelson",
