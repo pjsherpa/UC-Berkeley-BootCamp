@@ -8,7 +8,7 @@ const message1 = fileIO.read("message.txt");
 
 console.log(message1);
 
-fileIO.append("message.txt", "\nGoodbye World!");
+fileIO.append("index.html", "\nGoodbye World!");
 
 const message2 = fileIO.read("message.txt");
 
