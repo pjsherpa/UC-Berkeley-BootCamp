@@ -1,17 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
-  // This instance method uses a conditional statement to check if a user has pets
-  hasPets() {
-    if (this.username === this.password) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
+class User extends Model {}
 
 User.init(
   {
@@ -40,21 +30,8 @@ User.init(
         len: [8],
       },
     },
-    numberOfPets: {
-      type: DataTypes.INTEGER,
-    },
   },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      }, 
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
-      },
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
