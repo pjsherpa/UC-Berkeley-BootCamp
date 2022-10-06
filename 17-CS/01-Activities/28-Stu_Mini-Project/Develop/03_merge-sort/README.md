@@ -4,7 +4,7 @@ As the candidate it is your job to properly restate the problem and expected out
 
 ## Problem
 
-Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Bubble Sort" algorithm with a Big O complexity of `O(n^2)`. For example, for the following array:
+Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Merge Sort" algorithm with a Big O complexity of `O(n log(n))`. For example, for the following array:
 
 ```js
 const unsortedArr = [2, 42, 100, 23, 500, 34];

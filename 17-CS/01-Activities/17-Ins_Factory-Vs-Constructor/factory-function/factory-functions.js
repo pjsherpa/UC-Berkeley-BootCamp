@@ -48,6 +48,7 @@ decker.dry();
 // Now that we have taken a composition based approach we can now create a `Washer` function which utilizes making a phone call.
 const Washer = (name, noise, ringTone) => {
   const state = {
+    //prop
     name,
     noise,
     ringTone,
@@ -58,7 +59,11 @@ const Washer = (name, noise, ringTone) => {
   // Good coding practice is DRY. Don't Repeat Yourself.
   return { ...makeNoise(state), ...phoneCall(state) };
 };
-
+//becomes properties of wPool object.
 const wPool = Washer('Whirlpool', 'brshhh', 'ring ring from the washer');
 wPool.call();
 wPool.noise();
+
+const wPool2 = Washer('Whirlpool', 'brshhh', 'ring ring from the washer');
+wPool2.call();
+wPool2.noise();
