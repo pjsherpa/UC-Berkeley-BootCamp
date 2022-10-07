@@ -2,7 +2,7 @@
 // When designing a composition based approach we focus on what objects do instead of what they are.
 // Below we define the actions we want our factory functions to use.
 const phoneCall = (state) => ({
-  call: () => console.log(`${state.name}'s Phone: ${state.ringTone}`),
+   call: () => console.log(`${state.name}'s Phone: ${state.ringTone}`),
 });
 
 const makeNoise = (state) => ({

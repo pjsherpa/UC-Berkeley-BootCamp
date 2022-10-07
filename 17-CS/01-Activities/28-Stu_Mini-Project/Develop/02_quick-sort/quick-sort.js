@@ -1,12 +1,13 @@
 // Create our input data
-const unsortedInputArray = [];
+const unsortedInputArray = [2,5,1,6];
 // seed data in unsortedInputArray
-for (let i = 0; i < 2000; i++) {
-  unsortedInputArray.push(Math.round(Math.random() * 2000));
-}
+// for (let i = 0; i < 2000; i++) {
+//   unsortedInputArray.push(Math.round(Math.random() * 2000));
+// }
 
 // TODO: create quick sort function
-const quickSort = (array) => {};
+const quickSort = (array) => {
+ };
 
 const sorted = quickSort(unsortedInputArray);
 console.log('Post Sort:', sorted.join(' '));
