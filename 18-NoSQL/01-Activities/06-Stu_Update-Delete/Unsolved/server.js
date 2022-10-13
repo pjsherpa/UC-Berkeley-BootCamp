@@ -44,3 +44,10 @@ app.get('/read', (req, res) => {
 });
 
 // TODO: Add Delete route that uses a filter to delete a single document by id
+app.delete('/delete',(req,res)=>{
+  db.collection('bookCollection').deleteOne({'_id':ObjectId(req.body._id)},
+  (err,results)=>{
+    if(err) throw err;
+    res.send(results.deleteCount ?"Document was deleted":"No document was found");
+  })
+})
