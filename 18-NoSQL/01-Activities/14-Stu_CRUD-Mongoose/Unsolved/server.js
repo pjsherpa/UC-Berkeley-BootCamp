@@ -59,12 +59,37 @@ app.delete('/find-one-delete/:genre', (req, res) => {
   });
 });
 
-app.post('/find-one-update/:genre', (req, res) => {
+app.post('/find-one-update/:genre', async (req, res) => {
   // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
   // Update that name with the value given from the URL param
   // Return the updated document
+ Genre.findOneAndUpdate({name:'Kids'},{name:req.params.genre},{new:true},(err,result)=>{
+  if(result){
+    res.status(200).json(result);
+    console.log(`Deleted:${result}`)
+  }else{
+    console.log('Uh Oh, something went wrong');
+    res.status(500).json({ message: 'something went wrong' });
+  }
+ });
 });
 
+ /*
+  Another way
+ try{ let updateObject=await Genre.findOneAndUpdate({name:'Kids'},
+ //if done in json
+//  {name:req.body}
+ {name:req.params.genre},
+ {new:true},
+     
+ );
+ res.json(updateObject)
+}catch(error){
+console.log('Uh Oh, something went wrong');
+res.status(500).json({ message: 'something went wrong' });
+}
+});
+*/
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
