@@ -17,6 +17,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // Create a comment
+  
   createComment(req, res) {
     Comment.create(req.body)
       .then((comment) => {

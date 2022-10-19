@@ -9,6 +9,7 @@ const userSchema = new Schema(
   {
     toJSON: {
       // TODO: Mongoose will not include virtuals by default, so add a `virtuals` property and set it's value to true
+      virtuals: true,
     },
     id: false,
   }

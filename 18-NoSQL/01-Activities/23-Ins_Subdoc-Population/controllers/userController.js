@@ -8,6 +8,7 @@ module.exports = {
   },
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
+    //-__'V' it does its own type of versioning. we dont need line 12
       .select('-__v')
       .populate('posts')
       .then((user) =>
