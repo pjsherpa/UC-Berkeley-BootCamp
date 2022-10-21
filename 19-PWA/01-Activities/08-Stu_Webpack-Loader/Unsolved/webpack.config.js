@@ -19,9 +19,11 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        //mjs is a bleeding edge functionality in js, can be accessed michael jackson script. 
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env']
           }
