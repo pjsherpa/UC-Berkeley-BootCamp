@@ -24,6 +24,8 @@
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
-    "idb": "^6.1.2"
+    "idb": "^6.1.2",
+    "run": "^1.4.0",
+    "start": "^5.1.0"
   }
 }

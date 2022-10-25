@@ -14,7 +14,7 @@ const initdb = async () =>
 
 // Export a function we will use to POST to the database.
 export const postDb = async (content) => {
-  console.log('Post to the ase');
+  console.log('Post to the database');
 
   // Create a connection to the database database and version we want to use.
   const todosDb = await openDB('todos', 1);
@@ -27,6 +27,8 @@ export const postDb = async (content) => {
 
   // Use the .add() method on the store and pass in the content.
   const request = store.add({ todo: content });
+
+  // to delete const request = store.delete({ todo: content });
 
   // Get confirmation of the request.
   const result = await request;

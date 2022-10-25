@@ -18,8 +18,8 @@
     "concurrently": "^5.2.0"
   },
   "comments": {
-    "comment-start:dev": "TODO: Add your comment about start:dev script inside these quotes",
-    "comment-concurrently": "TODO: Add your comment about concurrently inside these quotes"
+    "comment-start:dev": "run app both front end and back end in dev mode",
+    "comment-concurrently": "npm package that allows us to run  npm run scripts in order"
   }
 }
 
