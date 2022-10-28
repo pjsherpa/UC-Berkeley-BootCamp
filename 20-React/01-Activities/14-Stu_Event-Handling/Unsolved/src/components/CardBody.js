@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 // TODO: Add a comment explaining what is being passed to this "child" component as props
-
+//Props is an object that contains both event handlers and the count variable.
 function CardBody(props) {
   return (
     <div className="card-body">
@@ -12,7 +12,7 @@ function CardBody(props) {
         onClick={props.handleIncrement}
       >
         Increment
-      </button>{' '}
+      </button>{" "}
       <button
         type="button"
         className="btn btn-danger"
