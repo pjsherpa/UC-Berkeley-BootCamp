@@ -1,17 +1,17 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import Container from './Container';
-import Row from './Row';
-import Col from './Col';
-import Card from './Card';
-import SearchForm from './SearchForm';
-import MovieDetail from './MovieDetail';
-import API from '../utils/API';
+import React from "react";
+import { useState, useEffect } from "react";
+import Container from "./Container";
+import Row from "./Row";
+import Col from "./Col";
+import Card from "./Card";
+import SearchForm from "./SearchForm";
+import MovieDetail from "./MovieDetail";
+import API from "../utils/API";
 
 const OmdbContainer = () => {
   // Set state for the search result and the search query
   const [result, setResult] = useState({});
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
 
   // When the search form is submitted, use the API.search method to search for the movie(s)
   const searchMovie = (query) =>
@@ -23,7 +23,7 @@ const OmdbContainer = () => {
   // The empty optional array [] will cause the hook to only run one time after the component loads
   // Refer to https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects
   useEffect(() => {
-    searchMovie('The Matrix');
+    searchMovie("The Matrix");
   }, []);
 
   // Handler for input changes to the search form
@@ -37,11 +37,11 @@ const OmdbContainer = () => {
 
   // Destructure the result object to make the code more readable, assign them to empty strings to start
   const {
-    Title = '',
-    Poster = '',
-    Director = '',
-    Genre = '',
-    Released = '',
+    Title = "",
+    Poster = "",
+    Director = "",
+    Genre = "",
+    Released = "",
   } = result;
 
   /* Fall back to default header if `Title` is undefined
@@ -52,7 +52,7 @@ const OmdbContainer = () => {
     <Container>
       <Row>
         <Col size="md-8">
-          <Card heading={Title || 'Search for a Movie to Begin'}>
+          <Card heading={Title || "Search for a Movie to Begin"}>
             {Title ? (
               <MovieDetail
                 title={Title}
