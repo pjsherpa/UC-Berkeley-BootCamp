@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type School {
@@ -34,5 +34,5 @@ const typeDefs = gql`
     class(id: ID!): Class
   }
 `;
-
+// ID! means its required
 module.exports = typeDefs;

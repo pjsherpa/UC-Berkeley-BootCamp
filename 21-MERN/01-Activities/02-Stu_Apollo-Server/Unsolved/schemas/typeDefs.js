@@ -1,4 +1,8 @@
-const { gql } = require('apollo-server-express');
+//line 7 makes auto complete easy on appolo model type def helps us to make less errors.
+
+//line 17 defines what type of data it is
+
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   # TODO: Add a comment describing the functionality of this statement
