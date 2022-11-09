@@ -1,15 +1,14 @@
+// Import our actions. Actions are in all caps.
 import {
   ADD_STUDENT,
   REMOVE_STUDENT,
   UPDATE_STUDENT,
   ADD_MAJOR,
   REMOVE_MAJOR,
-} from "./actions";
-import createId from "./createId";
+} from './actions';
+import createId from './createId';
 
-// TODO: Add a comment explaining what a reducer is
-// Your comment here
-// Reducers, as the name suggests, take in two things: previous state and an action. Then they reduce it (read it return) to one entity: the new updated instance of state. So reducers are basically pure JS functions which take in the previous state and an action and return the newly updated state.
+// Reducer accepts state and an action, returns a new state
 export default function reducer(state, action) {
   switch (action.type) {
     case ADD_STUDENT: {
@@ -31,25 +30,20 @@ export default function reducer(state, action) {
       };
     }
     case UPDATE_STUDENT: {
-      // TODO: Add a comment describing how we get the student index
-      // Your comment here
-      //we get the student index throughfindIndex through the payload id.
-
       const studentIndex = state.students.findIndex(
         (student) => student.id === action.payload.id
       );
 
-      // TODO: Add a comment describing what the spread operator is doing
-      // Your code here
-      // spread operator is bringing in all the array of object and destructuring to get the student index
-
+      // Variable to hold our student object
       const updatedStudent = {
         ...state.students[studentIndex],
         ...action.payload,
       };
 
+      // Make a copy of our current students array
       const newStudentsList = [...state.students];
 
+      // Assign the updated student to their existing position in the newStudentsList
       newStudentsList[studentIndex] = updatedStudent;
 
       return {
@@ -58,16 +52,12 @@ export default function reducer(state, action) {
       };
     }
     case ADD_MAJOR: {
-      // TODO: Add a comment explaining what this case is returning
-      //switch case for adding major
       return {
         ...state,
         majors: [...state.majors, action.payload],
       };
     }
     case REMOVE_MAJOR: {
-      // // TODO: Add a comment explaining what this case is returning
-      // switch case for removing major
       return {
         ...state,
         majors: [...state.majors].filter((major) => major !== action.payload),
