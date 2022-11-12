@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 // TODO: Add code to import necessary component for creating internal hyperlinks
+import { Link } from "react-router-dom";
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
@@ -14,7 +15,7 @@ const ThoughtList = ({ thoughts, title }) => {
           <div key={thought._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {thought.thoughtAuthor} <br />
-              <span style={{ fontSize: '1rem' }}>
+              <span style={{ fontSize: "1rem" }}>
                 had this thought on {thought.createdAt}
               </span>
             </h4>
@@ -22,6 +23,12 @@ const ThoughtList = ({ thoughts, title }) => {
               <p>{thought.thoughtText}</p>
             </div>
             {/* TODO: Add code to create a link to this thought's single thought page at `/thoughts/<id>` */}
+            <Link
+              className="btn btn-block btn-squared btn-light text-dark"
+              to={`/thoughts/${thought._id}`}
+            >
+              View and endorse their skills.
+            </Link>
           </div>
         ))}
     </div>

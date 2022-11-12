@@ -1,7 +1,7 @@
 // We import useState and useEffect in our component
-import React, { useState, useEffect } from 'react';
-import SearchBar from './components/SearchBar';
-import IssueList from './components/IssueList';
+import React, { useState, useEffect } from "react";
+import SearchBar from "./components/SearchBar";
+import IssueList from "./components/IssueList";
 
 function App() {
   // We declare a state variable that is an array called `issues` and a function to update it.
@@ -9,7 +9,7 @@ function App() {
 
   // When the page loads, set the document title to something specific to this app. Runs once because of optional dependency array
   useEffect(() => {
-    document.title = 'React Hooks Review';
+    getRepoIssues("React Hooks Review");
   }, []);
 
   // Helper function that preforms an API request and sets the `issues` array to a list of issues from GitHub
