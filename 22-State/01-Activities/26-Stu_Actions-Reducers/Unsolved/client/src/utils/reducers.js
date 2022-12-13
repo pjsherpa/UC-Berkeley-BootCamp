@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer } from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -9,13 +9,14 @@ import {
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
   TOGGLE_CART,
-} from './actions';
+} from "./actions";
 
 // TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
 export const reducer = (state, action) => {
   switch (action.type) {
     // TODO: Add a comment describing the functionality of the UPDATE_PRODUCTS case
     // Your comment here
+    //using the spread operator it fetches using the action in all the selected products for the user
     case UPDATE_PRODUCTS:
       return {
         ...state,
@@ -35,7 +36,7 @@ export const reducer = (state, action) => {
         cart: [...state.cart, ...action.products],
       };
     // TODO: Add a comment describing the functionality of the UPDATE_CART_QUANTITY case
-    // Your comment here
+    // the action utilised to select purchase quantity updates the products purcahse quantity for  the user.
     case UPDATE_CART_QUANTITY:
       return {
         ...state,
@@ -49,7 +50,8 @@ export const reducer = (state, action) => {
       };
 
     // TODO: Add a comment describing the functionality of the REMOVE_FROM_CART case
-    // Your comment here
+    // it filters/removes the selected product //how come??
+
     case REMOVE_FROM_CART:
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
@@ -87,7 +89,7 @@ export const reducer = (state, action) => {
       };
 
     // TODO: Add a comment describing what the default case is for
-    // Your comment here
+    // Default remains on the orginal state where the action has not yet taken place.
     default:
       return state;
   }

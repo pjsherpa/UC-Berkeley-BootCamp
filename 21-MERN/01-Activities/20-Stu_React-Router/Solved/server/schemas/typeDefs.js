@@ -1,4 +1,6 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
+
+//graphql schema langauge string or array
 
 const typeDefs = gql`
   type Thought {
